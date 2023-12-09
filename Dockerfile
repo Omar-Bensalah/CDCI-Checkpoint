@@ -1,7 +1,9 @@
 # Stage 1
 
-FROM nginx:1.17.1-alpine as service
+FROM nginx:alpine
 
-COPY /app/dist/hellotmoto /usr/share/nginx/html
+COPY ./dist/hellotmoto /usr/share/nginx/html
 
-Expose 4200  
+EXPOSE 8200
+
+CMD ["nginx", "-g", "daemon off;"]
