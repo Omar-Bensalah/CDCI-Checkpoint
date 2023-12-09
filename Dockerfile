@@ -2,7 +2,7 @@
 
 FROM nginx:alpine
 
-COPY ./dist/hellotmoto /usr/share/nginx/html
+COPY /var/lib/jenkins/workspace/Labphase/dist/hellomoto /usr/share/nginx/html
 
 EXPOSE 8200
 
