@@ -37,6 +37,13 @@ pipeline{
             }
         }
 
+       stage('Docker Build') {
+    	agent any
+      steps {
+      	sh 'docker build -t omarbensalah/labphasetest:latest .'
+      }
+    }
+
 }
 	    
         post {
