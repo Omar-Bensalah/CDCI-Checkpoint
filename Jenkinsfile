@@ -40,7 +40,7 @@ pipeline{
        stage('Docker Build') {
     	agent any
       steps {
-      	sh 'docker build -t omarbensalah/labphasetest:latest .'
+      	sh 'docker build -t omarbensalah/labphasetest:latest . -f ./Dockerfile'
       }
     }
 
